@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Font Selector</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+<link id="fontGoogle" href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+<style>
+body{font-family: 'Rubik', sans-serif;}
+</style>
+	<script>
+		function updateText() {
+			var text = $('#textInput').val();
+			var font = $('#font').val();
+			var fontSize = $('#fontSize').val();
+			var color = $('#color').val();
+			var align = $('#align').val();
+			
+			document.getElementById('fontGoogle').href = 'https://fonts.googleapis.com/css2?family=' + encodeURIComponent(font)
+		
+			$('#result').css({
+				'font-family': font,
+				'font-size': fontSize + 'px',
+				'color': color,
+				'text-align': align
+			}).text(text);
+		}
+
+		function submitForm() {
+			var text = $('#textInput').val();
+			var font = $('#font').val();
+			var fontSize = $('#fontSize').val();
+			var color = $('#color').val();
+			var align = $('#align').val();
+
+			var url = 'http://localhost:9898/Local/CB%20API%20Links/index.html?text=' + encodeURIComponent(text) + '&font=' + encodeURIComponent(font) + '&fontSize=' + encodeURIComponent(fontSize) + '&color=' + encodeURIComponent(color) + '&align=' + encodeURIComponent(align);
+			window.location.href = url;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<label for="textInput">Text:</label>
+		<input type="text" id="textInput" value="Enter your text here" oninput="updateText()"><br>
+		<label for="color">Text color:</label>
+		<select id="color" onchange="updateText()">
+			<option value="#333333">Dark Gray</option>
+			<option value="#666666">Gray</option>
+			 <option value="#999999">Light Gray</option>
+			<option value="white">White</option>
+			<option value="red">Red</option>
+			<option value="green">Green</option>
+			<option value="blue">Blue</option>
+			<option value="purple">Purple</option>
+			<option value="yellow">Yellow</option>
+			<option value="orange">Orange</option>
+			<option value="pink">Pink</option>
+			<option value="brown">Brown</option>
+		</select><br>
+		<label for="fontSize">Font size:</label>
+		<input type="number" id="fontSize" min="10" max="72" value="24" oninput="updateText()"><br>
+		<label for="font">Font:</label>
+		<select id="font" onchange="updateText()">
+			<option value="sans-serif">Sans-serif</option>
+			<option value="Creepster">Creepster</option>
+			<option value="Roboto">Roboto</option>
+			<option value="Rubik">Rubik</option>
+			<option value="Anton">Anton</option>
+			<option value="Bangers">Bangers</option>
+			<option value="Coiny">Coiny</option>
+			<option value="Lato">Lato</option>
+			<option value="Montserrat">Montserrat</option>
+			<option value="Orbitron">Orbitron</option>
+			<option value="Oswald">Oswald</option>
+			<option value="Pacifico">Pacifico</option>
+			<option value="Play">Play</option>
+			<option value="Righteous">Righteous</option>
+		<option value="Saira+Extra+Condensed">Saira Extra Condensed</option>
+		<option value="Saira+Semi+Condensed">Saira Semi Condensed</option>
+		<option value="Teko">Teko</option>
+		<option value="Ubuntu">Ubuntu</option>
+	</select><br>
+	<label for="align">Align:</label>
+	<select id="align" onchange="updateText()">
+	<option value="left">Left</option>
+	<option value="center">Center</option>
+	<option value="right">Right</option>
+	</select><br>
+	<input type="button" value="Submit" onclick="submitForm()">
+</form>
+<div id="result" style="font-family: sans-serif; font-size: 24px;">Enter your text here</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Font Selector</title>
+	<title>CB Text Service Create</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 <link id="fontGoogle" href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
@@ -33,7 +33,7 @@ body{font-family: 'Rubik', sans-serif;}
 			var color = $('#color').val();
 			var align = $('#align').val();
 
-			var url = 'http://localhost:9898/Local/CB%20API%20Links/index.html?text=' + encodeURIComponent(text) + '&font=' + encodeURIComponent(font) + '&fontSize=' + encodeURIComponent(fontSize) + '&color=' + encodeURIComponent(color) + '&align=' + encodeURIComponent(align);
+			var url = 'https://cb-services.vercel.app/text-service/?text=' + encodeURIComponent(text) + '&font=' + encodeURIComponent(font) + '&fontSize=' + encodeURIComponent(fontSize) + '&color=' + encodeURIComponent(color) + '&align=' + encodeURIComponent(align);
 			window.location.href = url;
 		}
 	</script>

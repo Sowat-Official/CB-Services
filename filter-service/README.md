@@ -2,6 +2,8 @@
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/username/repo/releases/tag/v1.0.0)
 
+[How to use](https://github.com/Sowat-Official/CB-Services/blob/main/filter-service/README.md#how-to-use)
+
 The filter service allows you to filter text. Although the filtering is not perfect, it removes many of the worst words while keeping less offensive ones. A list of blocked words is available, but it's not recommended to view them. However, if you're working on your own, you can access the JSON file containing all the blocked words [here](https://cb-filter.vercel.app/jsons/merged.json), or individual language files can be found in the table below:
 
 | Language | File |

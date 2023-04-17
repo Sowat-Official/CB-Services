@@ -41,7 +41,7 @@ The filter service allows you to filter text. Although the filtering is not perf
 # How to use
 
 ```js
-// main.js
+// main.js (DO NOT FORGET TO SET SCRIPT TYPE TO MODULE)
 
 import { cbFilter } from 'https://cb-services.vercel.app/filter-service/api.js'; //Get the api
 

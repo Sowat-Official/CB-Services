@@ -39,3 +39,16 @@ The filter service allows you to filter text. Although the filtering is not perf
 | Chinese  | [zh.json](https://cb-filter.vercel.app/jsons/zh.json) |
 
 # How to use
+
+```js
+// main.js
+
+import { cbFilter } from 'https://cb-services.vercel.app/filter-service/api.js'; //Get the api
+
+const text = 'This is a test message for the CB filter.'; //Enter text input
+
+cbFilter.then(filter => {
+  const filtered = filter(text); //The filtered text
+  console.log(filtered);
+});
+```

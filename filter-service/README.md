@@ -1,9 +1,7 @@
-# Cartoon Blox Filter Service
+Cartoon Blox Filter Service
+Version
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/username/repo/releases/tag/v1.0.0)
-
-The filter service allows you to filter text the filtering is not the best but it filters the worst words and keeps the not so bad or good
-The words that this blocked are available to see but is not recommended but if you're working on you're own here is the json filled with it [here](https://cb-filter.vercel.app/jsons/merged.json)
+The filter service allows you to filter text. Although the filtering is not perfect, it removes many of the worst words while keeping less offensive ones. A list of blocked words is available, but it's not recommended to view them. However, if you're working on your own, you can access the JSON file containing all the blocked words [here](https://cb-filter.vercel.app/jsons/merged.json), or individual language files can be found in the table below:
 
 | Language | File |
 | -------- | ---- |

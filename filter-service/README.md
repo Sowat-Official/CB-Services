@@ -35,3 +35,5 @@ The filter service allows you to filter text. Although the filtering is not perf
 | Klingon  | [tlh.json](https://cb-filter.vercel.app/jsons/tlh.json) |
 | Turkish  | [tr.json](https://cb-filter.vercel.app/jsons/tr.json) |
 | Chinese  | [zh.json](https://cb-filter.vercel.app/jsons/zh.json) |
+
+# How to use

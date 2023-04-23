@@ -42,14 +42,6 @@
         overflow: auto;
       }
     </style>
-  </head>
-  <body>
-    <h1>Test Filter</h1>
-    <label for="input">Input:</label>
-    <textarea id="input"></textarea>
-    <button onclick="filter()">Filter</button>
-    <label for="output">Output:</label>
-    <div id="output"></div>
     <script type="module">
       import { cbFilter } from 'https://cb-services.vercel.app/filter-service/api.js'; //Get the api
       
@@ -63,5 +55,13 @@
         });
       }
     </script>
+  </head>
+  <body>
+    <h1>Test Filter</h1>
+    <label for="input">Input:</label>
+    <textarea id="input"></textarea>
+    <button onclick="filter()">Filter</button>
+    <label for="output">Output:</label>
+    <div id="output"></div>
   </body>
 </html>

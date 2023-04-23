@@ -18,7 +18,7 @@ export const cbFilter = cbFilterPromise.then(() => {
             return text;
         }
 
-        const words = text.split(" ");
+        const words = text.replace(/[?.,@#$%^&*()[\]{}|\\'";:<>]/g, '').split(" ");
         let returning = '';
 
         for (let i = 0; i < words.length; i++) {

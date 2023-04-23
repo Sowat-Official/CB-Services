@@ -41,27 +41,28 @@
         border-radius: 5px;
         overflow: auto;
       }
-    </style>
-    <script type="module">
-      import { cbFilter } from 'https://cb-services.vercel.app/filter-service/api.js'; //Get the api
-      
-      function filter() {
-        // Get the input text
-        var input = document.getElementById("input").value;
-        
-        cbFilter.then(filter => {
-          const filtered = filter(input); //The filtered text
-          document.getElementById("output").innerHTML = filtered;
-        });
-      }
-    </script>
   </head>
   <body>
     <h1>Test Filter</h1>
     <label for="input">Input:</label>
     <textarea id="input"></textarea>
-    <button onclick="filter()">Filter</button>
+    <button id="filterBtn">Filter</button>
     <label for="output">Output:</label>
     <div id="output"></div>
+         </style>
+    <script type="module">
+      import { cbFilter } from 'https://cb-services.vercel.app/filter-service/api.js'; //Get the api
+
+  const filterBtn = document.getElementById("filterBtn");
+  filterBtn.addEventListener("click", function() {
+    // Get the input text
+    var input = document.getElementById("input").value;
+
+    cbFilter.then(filter => {
+      const filtered = filter(input); //The filtered text
+      document.getElementById("output").innerHTML = filtered;
+    });
+  });
+    </script>
   </body>
 </html>

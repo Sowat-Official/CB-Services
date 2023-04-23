@@ -50,15 +50,17 @@
     <button onclick="filter()">Filter</button>
     <label for="output">Output:</label>
     <div id="output"></div>
-    <script>
+    <script type="module">
+      import { cbFilter } from 'https://cb-services.vercel.app/filter-service/api.js'; //Get the api
+      
       function filter() {
         // Get the input text
         var input = document.getElementById("input").value;
         
-        // Do the filtering here...
-        
-        // Set the output text
-        document.getElementById("output").innerHTML = "Filtered text goes here.";
+        cbFilter.then(filter => {
+          const filtered = filter(input); //The filtered text
+          document.getElementById("output").innerHTML = filtered;
+        });
       }
     </script>
   </body>

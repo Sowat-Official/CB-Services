@@ -22,7 +22,7 @@ export const cbFilter = cbFilterPromise.then(() => {
         let returning = '';
 
         for (let i = 0; i < words.length; i++) {
-            if (output.includes(words[i].lower()) {
+            if (output.includes(words[i].toLowerCase()) {
                 let hashString = "#".repeat(words[i].length);
                 returning = returning + ' ' + hashString
             } else {

@@ -1,6 +1,6 @@
 # Cartoon Blox Filter Service
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/username/repo/releases/tag/v1.0.1)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/username/repo/releases/tag/v1.0.0)
 ![Word Count](https://img.shields.io/badge/Word%20Count-7200%2B-blue)
 
 [How to use](https://github.com/Sowat-Official/CB-Services/blob/main/filter-service/README.md#how-to-use)
